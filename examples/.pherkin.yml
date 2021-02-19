@@ -1,0 +1,11 @@
+# `man pherkin`, "CONFIGURATION PROFILES"
+
+default:
+   steps:
+     - /usr/share/perl/5.30.0/Test/BDD/Plugin/steps
+   o: TermColor
+   tags:
+     - tag1,tag2,tag3
+
+# Note: this file is being used by the test suite;
+#  be sure to run tests after modifying
