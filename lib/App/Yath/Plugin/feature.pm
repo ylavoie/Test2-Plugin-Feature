@@ -3,7 +3,7 @@ package App::Yath::Plugin::feature;
 use strict;
 use warnings;
 
-our $VERSION = '0.001103';
+our $VERSION = '0.001104';
 
 use parent 'App::Yath::Plugin';
 use App::Yath::Options;
@@ -203,8 +203,7 @@ App::Yath::Plugin::feature - Plugin to allow testing Pherkin files.
 
 =head1 DESCRIPTION
 
-This plugin interfaces yath with Test::BDD::Cucumber, a feature-complete
-Cucumber-style testing in Perl
+This module set invocation option to interfaces yath with Test::BDD::Cucumber, a feature-complete Cucumber-style testing in Perl
 
 =head1 SOURCE
 

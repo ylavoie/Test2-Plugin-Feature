@@ -9,8 +9,7 @@ App::Yath::Plugin::feature - Plugin to allow testing Pherkin files.
 
 # DESCRIPTION
 
-This plugin interfaces yath with Test::BDD::Cucumber, a feature-complete
-Cucumber-style testing in Perl
+This module set invocation option to interfaces yath with Test::BDD::Cucumber, a feature-complete Cucumber-style testing in Perl
 
 # SOURCE
 
