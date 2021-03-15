@@ -3,7 +3,7 @@ package App::Yath::Plugin::feature;
 use strict;
 use warnings;
 
-our $VERSION = '0.001106';
+our $VERSION = '0.001107';
 
 use parent 'App::Yath::Plugin';
 use App::Yath::Options;
