@@ -1,4 +1,4 @@
-package App::Yath::Plugin::feature;
+package App::Yath::Plugin::Feature;
 
 use strict;
 use warnings;
@@ -8,7 +8,7 @@ our $VERSION = '0.001107';
 use parent 'App::Yath::Plugin';
 use App::Yath::Options;
 
-option_group {prefix => 'feature', category => "Plugin feature"} => sub {
+option_group {prefix => 'Feature', category => "Plugin feature"} => sub {
 
     option match => (
         #short        => 'm',
@@ -129,9 +129,9 @@ option_group {prefix => 'feature', category => "Plugin feature"} => sub {
             my ($option,$value) = split /=/, $raw, 2;
 
             if ( $option =~ /steps/ ) {
-                push @{$settings->feature->$option}, $value
+                push @{$settings->Feature->$option}, $value
             } else {
-                $settings->feature->$option = $value;
+                $settings->Feature->$option = $value;
             }
         }
     );
@@ -150,18 +150,18 @@ sub munge_files {
             my @args = ();
             foreach (qw(config debug_profile extension i18n
                         matching output profile tags theme)) {
-              push @args, "--$_", $settings->feature->$_
-                if defined $settings->feature->$_;
+              push @args, "--$_", $settings->Feature->$_
+                if defined $settings->Feature->$_;
             }
             push @args, '--match'
-                if defined $settings->feature->match
-                && $settings->feature->match;
-            foreach (@{$settings->feature->steps}) {
+                if defined $settings->Feature->match
+                && $settings->Feature->match;
+            foreach (@{$settings->Feature->steps}) {
               push @args, '--steps', $_;
             }
             $tf = Test2::Harness::TestFile->new(
                 file => $tf->file,
-                job_class => 'Test2::Harness::Runner::Job::feature',
+                job_class => 'Test2::Harness::Runner::Job::Feature',
                 relative => $tf->relative,
                 queue_args => [
                     command => 'pherkin',
@@ -195,7 +195,7 @@ __END__
 
 =head1 NAME
 
-App::Yath::Plugin::feature - Plugin to allow testing Pherkin files.
+App::Yath::Plugin::Feature - Plugin to allow testing Pherkin files.
 
 =head1 SYNOPSIS
 

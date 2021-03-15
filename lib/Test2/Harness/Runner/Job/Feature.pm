@@ -1,4 +1,4 @@
-package Test2::Harness::Runner::Job::feature;
+package Test2::Harness::Runner::Job::Feature;
 
 use strict;
 use warnings;
