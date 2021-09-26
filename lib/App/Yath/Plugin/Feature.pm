@@ -97,7 +97,7 @@ option_group {prefix => 'Feature', category => "Plugin feature"} => sub {
 
     option tags => (
         #short        => 't',
-        type         => 's',
+        type         => 'm',
         long_examples => [ '@tag', ' @tag1,@tag2', ' ~@tag' ],
         description  => [ "Run scenarios tagged with '\@tag', ",
                           "'\@tag1' or '\@tag2', or without '\@tag'"],
