@@ -3,7 +3,7 @@ package Test2::Plugin::Feature;
 use strict;
 use warnings;
 
-our $VERSION = '0.001111';
+our $VERSION = '0.001112';
 
 1;
 
